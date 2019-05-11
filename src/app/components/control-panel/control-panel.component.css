@@ -1,0 +1,8 @@
+.control-panel {
+    width: 100%;
+    height: 100%;
+}
+
+.control-panel__add-product {
+    margin-top: 5%;
+}
