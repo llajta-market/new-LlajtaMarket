@@ -27,4 +27,8 @@ export class FormComponent implements OnInit {
     this.newProduct=new Product();
   }
 
+  onselected(event){
+    this.newProduct.image="src/assets/image/"+event.target.files[0].name;
+  }
+
 }

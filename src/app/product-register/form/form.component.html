@@ -32,18 +32,19 @@
 
       <hr>
 
-      <div class="file-field input-field">
-          
+      <div class="file-field input-field">    
         <div class="btn">
           <span>Subir Imagen</span>
-          <input type="file">
+          <input type="file" (change)='onselected($event)'>
         </div>
   
         <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
+          <input class="file-path validate">
         </div>
 
       </div>
+      
+
 
 
       <div class="row">
