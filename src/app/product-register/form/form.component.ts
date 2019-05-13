@@ -28,14 +28,18 @@ export class FormComponent implements OnInit {
 
     if(flag===false){
       newPath='message-failed';
+    }else{
+      this.productsService.addProduct(this.newProduct);
     }
     this.router.navigateByUrl(newPath);
 
     this.newProduct=new Product();
+
+    
   }
 
   onselected(event){
-    this.newProduct.image="src/assets/image/"+event.target.files[0].name;
+    this.newProduct.image=event.target.files[0].name;
   }
 
   comprobar(){
