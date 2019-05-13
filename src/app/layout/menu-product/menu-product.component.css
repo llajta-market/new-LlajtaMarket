@@ -1,0 +1,17 @@
+.button {
+    background-color: #f1818b;
+    border: none;
+    color: #040a0a;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-collapse: collapse;
+    width: 45%
+  }
+  .button-radius{
+    border-radius: 12px;
+  }
