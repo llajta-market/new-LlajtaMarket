@@ -4,7 +4,10 @@ import { ProductDetailComponent } from './layout/product-detail/product-detail.c
 
 
 const routes: Routes = [
-  {path: 'product', component: ProductDetailComponent},
+  {
+    path: 'objetivo', 
+    loadChildren : './objetivo/objetivo.module#ObjetivoModule'
+  },
   {
     path: 'product-register',
     loadChildren: './product-register/product-register.module#ProductRegisterModule'
