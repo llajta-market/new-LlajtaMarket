@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/models/product';
 import { ProductsService } from 'src/app/services/products.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'iso-form',
@@ -9,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private productsService : ProductsService) { }
+  constructor(private productsService : ProductsService, private router : Router) { }
 
   ngOnInit() {
   }
@@ -22,13 +23,29 @@ export class FormComponent implements OnInit {
 
     console.log(this.newProduct);
 
-    this.productsService.addProduct(this.newProduct);
+    var newPath = 'message-done';
+    var flag=this.comprobar();
+
+    if(flag===false){
+      newPath='message-failed';
+    }
+    this.router.navigateByUrl(newPath);
 
     this.newProduct=new Product();
   }
 
   onselected(event){
     this.newProduct.image="src/assets/image/"+event.target.files[0].name;
+  }
+
+  comprobar(){
+    return typeof this.newProduct.name==='string' &&
+    typeof this.newProduct.price==='number' &&
+    typeof this.newProduct.amount=='number' &&
+    typeof this.newProduct.details==='string' &&
+    typeof this.newProduct.offer==='boolean' &&
+    typeof this.newProduct.category==='string' &&
+    typeof this.newProduct.image==='string'
   }
 
 }
