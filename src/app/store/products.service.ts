@@ -12,4 +12,5 @@ export class ProductsService {
   getProducts(): Observable<Product[]>{
     return this.db.collection<Product>('products').valueChanges();
   }
+  
 }

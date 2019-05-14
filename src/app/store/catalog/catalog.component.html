@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <div *ngFor="let product of products$ | async"  class="col s12 m3">
+    <div *ngFor="let product of products$ | async"  class="col s12 m4">
       <div class="card">
         <div class="card-image">
           <img [src]="product.image">
-          <span class="card-title">{{product.name}}</span>
+          <span class="card-title" style="color:red;">{{product.name}}</span>
         </div>
         <div class="card-content">
           <p>
@@ -14,8 +14,8 @@
           </p>
 
         </div>
-        <div class="card-action">
-          <a><b>Editar</b></a>
+        <div class="card-action" >
+          <a a href="/objetivo" (click)="openForm()"><b>Editar</b></a>
         </div>
       </div>
     </div>
