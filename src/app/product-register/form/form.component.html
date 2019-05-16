@@ -4,35 +4,43 @@
       
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Ingrese el producto a vender" [(ngModel)]="newProduct.name" id="product-name" name="product-name" type="text" class="validate">
+          <input placeholder="Nombre del Producto" [(ngModel)]="newProduct.name" id="product-name" name="product-name" type="text" class="validate">
           <label for="product-name">Nombre del Producto</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Ingrese el precio del producto" [(ngModel)]="newProduct.price" id="product-price" name="product-price" type="number" class="validate" min="0">
+          <input placeholder="Ingrese Precio" [(ngModel)]="newProduct.price" id="product-price" name="product-price" type="number" class="validate" min="0">
           <label for="product-price">Ingrese Precio</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Ingrese la cantidad" [(ngModel)]="newProduct.amount" id="product-amount" name="product-amount" type="number" class="validate" min="0">
+          <input placeholder="Cantidad Disponible" [(ngModel)]="newProduct.amount" id="product-amount" name="product-amount" type="number" class="validate" min="0">
           <label for="product-amount">Cantidad Disponible</label>
         </div>
       </div>
 
       <div class="row">
           <div class="input-field col s12">
-              <textarea placeholder="Ingrese las caracteristicas del producto" [(ngModel)]="newProduct.details" id="product-details" name="product-details" type="text" class="materialize-textarea"></textarea>
+              <textarea placeholder="Caracteristicas" [(ngModel)]="newProduct.details" id="product-details" name="product-details" type="text" class="materialize-textarea"></textarea>
               <label for="product-details">Caracteristicas</label>
             </div>
       </div>
 
+      <div class="row">
+        <div class="input-field col s12">
+            <textarea placeholder="Url Imagen" [(ngModel)]="newProduct.image" id="product-image" name="product-image" type="text" class="materialize-textarea"></textarea>
+            <label for="product-details">Url Imagen</label>
+          </div>
+      </div>
+
+
       <hr>
 
-      <div class="file-field input-field">    
+      <!--div class="file-field input-field">    
         <div class="btn">
           <span>Subir Imagen</span>
           <input type="file" (change)='onselected($event)'>
@@ -43,13 +51,18 @@
         </div>
 
       </div>
-      
+    -->
 
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <a (click)="registerProduct()" class="waves-effect waves-light btn">Comenzar Venta</a>
         </div>
+
+        <div class="input-field col s6">
+          <a href="/" class="waves-effect waves-light btn">Cancelar</a>
+        </div>
       </div>
+
     </form>
 
     
