@@ -34,13 +34,11 @@ export class FormComponent implements OnInit {
     this.router.navigateByUrl(newPath);
 
     this.newProduct=new Product();
-
-    
   }
 
-  onselected(event){
+  /*onselected(event){
     this.newProduct.image=event.target.files[0].name;
-  }
+  }*/
 
   comprobar(){
     return typeof this.newProduct.name==='string' &&

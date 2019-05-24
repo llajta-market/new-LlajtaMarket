@@ -7,10 +7,11 @@ import { Product } from '../shared/models/product';
 })
 export class ProductsService {
 
-  constructor(private db: AngularFirestore) { }
+  constructor(private db:  AngularFirestore) { }
 
   addProduct(p : Product): void {
     let obj = JSON.parse(JSON.stringify(p));
     this.db.collection('products').add(obj);
   }
+
 }
