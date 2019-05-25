@@ -1,19 +1,35 @@
 <div class="container">
   <div class="row">
-    <p class="text-align center">Registro de Usuario</p>
+    <p class="text-align center">{{componentAction}}</p>
     <div class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="name" type="text" class="validate">
+          <input id="name" [(ngModel)]="user.name" type="text" class="validate">
           <label for="name">Nombre</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" [(ngModel)]="user.last_name" type="text" class="validate">
           <label for="last_name">Apellido</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field col s12">
+          <input id="email" [(ngModel)]="user.email" type="email" class="validate">
+          <label for="email">Correo Electronico</label>
+        </div>
+      </div>
+      <div *ngIf="creating" class="row">
+        <div class="input-field col s6">
+          <input id="password" [(ngModel)]="user.email" type="password" class="validate">
+          <label for="password">contrasenia</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="password" [(ngModel)]="user.password" type="password" class="validate">
+          <label for="password">Confirme su contrasenia</label>
+        </div>
+      </div>
+      <div *ngIf="creating" class="row">
+        <div class="col s12">
           <p>
             <label>
               <input type="checkbox" />
@@ -22,19 +38,13 @@
           </p>
           <span class="helper-text" data-error="wrong" data-success="right">Al ser vendedor, tendra mas opciones sobre el sistema</span>
         </div>
-        <div class="input-field col s8">
-          <input id="email" type="email" class="validate">
-          <label for="email">Correo Electronico</label>
-        </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" class="validate">
-          <label for="password">contrasenia</label>
+        <div class="col s4">
+          <a class="waves-effect waves-light btn">Cancelar</a>
         </div>
-        <div class="input-field col s6">
-          <input id="password" type="password" class="validate">
-          <label for="password">Confirme su contrasenia</label>
+        <div class="col s4">
+          <a class="waves-effect waves-light btn" (click)="registerUser()">{{componentAction}}</a>
         </div>
       </div>
     </div>

@@ -7,15 +7,17 @@ import { RegisterComponent } from './components/user/register/register.component
 
 const routes: Routes = [
   {
-    path: 'objetivo', 
-    loadChildren : './objetivo/objetivo.module#ObjetivoModule'
+    path: 'objetivo',
+    loadChildren: './objetivo/objetivo.module#ObjetivoModule'
   },
   {
     path: 'product-register',
     loadChildren: './product-register/product-register.module#ProductRegisterModule'
   },
-  {path: 'store',
-  loadChildren: './store/store.module#StoreModule'},
+  {
+    path: 'store',
+    loadChildren: './store/store.module#StoreModule'
+  },
   {
     path: 'control-panel', component: ControlPanelComponent
   },
@@ -30,7 +32,8 @@ const routes: Routes = [
   {
     path: 'register-user',
     component: RegisterComponent
-  }
+  },
+  { path: 'user/:id/edit', component: RegisterComponent },
 ];
 
 @NgModule({
