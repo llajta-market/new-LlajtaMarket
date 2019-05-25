@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ControlPanelComponent } from './components/control-panel/control-panel.component';
 import { ProductDetailComponent } from './layout/product-detail/product-detail.component';
 
+import { RegisterComponent } from './components/user/register/register.component'
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'message-done',
     loadChildren: './done-product/done-product.module#DoneProductModule'
+  },
+  {
+    path: 'register-user',
+    component: RegisterComponent
   }
 ];
 

@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import {ControlPanelComponent} from './components/control-panel/control-panel.component';
 import { LayoutModule } from './layout/layout.module';
 import { environment } from 'src/environments/environment';
+import { RegisterComponent } from './components/user/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ControlPanelComponent
+    ControlPanelComponent,
+    RegisterComponent
   ],
 
   imports: [
