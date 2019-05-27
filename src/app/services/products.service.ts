@@ -13,5 +13,8 @@ export class ProductsService {
     let obj = JSON.parse(JSON.stringify(p));
     this.db.collection('products').add(obj);
   }
-
+  updateItem(item: Product): void {
+    delete item.id;
+    this.db.doc('products/' + item.id).update(item);
+  }
 }

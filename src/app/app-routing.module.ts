@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { ProductDetailComponent } from './layout/product-detail/prduct-detail.component';
+import { ControlPanelComponent } from './components/control-panel/control-panel.component';
+//import { ProductDetailComponent } from './layout/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   {path: 'store',
   loadChildren: './store/store.module#StoreModule'},
   {
+    path: 'control-panel', component: ControlPanelComponent
+  },
+  {
     path: 'message-failed',
     loadChildren: './failed-product/failed-product.module#FailedProductModule'
   },
@@ -25,6 +29,7 @@ const routes: Routes = [
   {
     path: 'store',
     loadChildren: './store/store.module#StoreModule'
+
   }
 ];
 
