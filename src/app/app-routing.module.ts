@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'message-done',
     loadChildren: './done-product/done-product.module#DoneProductModule'
+  },
+  {
+    path: 'home-client',
+    loadChildren: './client/client.module#ClientModule'
   }
 ];
 

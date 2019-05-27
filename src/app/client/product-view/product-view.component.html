@@ -1,0 +1,30 @@
+<!-- Dropdown Trigger -->
+<a class='dropdown-trigger btn' href='/home-client' data-target='dropdown1'>Drop Me!</a>
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="/home-client">one</a></li>
+  <li><a href="/home-client">two</a></li>
+  <li><a href="/home-client">two</a></li>
+</ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m3" *ngFor="let product of products">
+      <div class="card" >
+        <div class="card-image">
+          <img [src]="product.image">
+          <span class="card-title">{{product.name}}</span>
+        </div>
+        <div class="card-content">
+          <p>
+            <b>Precio</b>${{product.price}}
+          </p>
+        </div>
+        <div class="card-action">
+          <a>Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
