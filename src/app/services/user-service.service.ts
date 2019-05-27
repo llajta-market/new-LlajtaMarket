@@ -10,26 +10,18 @@ import { ResourceLoader } from '@angular/compiler';
 })
 export class UserServiceService {
 
-  user_data = new User();
-
   constructor(private db: AngularFirestore) {
-    this.user_data = {
-      user_id: 12,
-      name: "juan",
-      last_name: "last name",
-      email: "last@gmail.com",
-      password: ""
-    }
   }
 
   createUser(user) {
-    return this.db.collection('users').add(user);
+    let obj = JSON.parse(JSON.stringify(user));
+    return this.db.collection('users').add(obj);
   }
 
   getUserById(user_id): Observable<any> {
     return this.db.collection('users').doc(user_id).snapshotChanges();
   }
-  
+
   updateUser(user, userId) {
     return this.db.collection('users').doc(userId).set(user)
   }
