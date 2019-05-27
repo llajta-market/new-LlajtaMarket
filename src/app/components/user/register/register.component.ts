@@ -34,13 +34,14 @@ export class RegisterComponent implements OnInit {
     if (this.creating) {
       this.userService.createUser(this.user).then(() => {
         console.log('User Registered');
-        
+        this.router.navigate(['/users']);
       }, (error) => {
         console.error(error);
       });
     } else {
       this.userService.updateUser(this.user, this.user.user_id).then(() => {
         console.log('User Registered');
+        this.router.navigate(['/users']);
       }, (error) => {
         console.error(error);
       });
@@ -50,7 +51,7 @@ export class RegisterComponent implements OnInit {
   loadUserData(): void {
     this.userService.getUserById(this.user.user_id).subscribe(
       result => {
-        this.user = result
+        this.user = result.payload.doc.data()
       }, exception => {
         console.log(exception)
       }

@@ -18,8 +18,12 @@ export class UserServiceService {
     return this.db.collection('users').add(obj);
   }
 
+  getUsers(): Observable<any> {
+    return this.db.collection('users').snapshotChanges();
+  }
+
   getUserById(user_id): Observable<any> {
-    return this.db.collection('users').doc(user_id).snapshotChanges();
+    return this.db.collection('users').doc(user_id).valueChanges();
   }
 
   updateUser(user, userId) {

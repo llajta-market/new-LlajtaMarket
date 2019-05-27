@@ -11,12 +11,14 @@ import { LayoutModule } from './layout/layout.module';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/user/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { UsersListComponent } from './components/user/users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ControlPanelComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsersListComponent
   ],
 
   imports: [

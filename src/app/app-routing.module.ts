@@ -4,6 +4,7 @@ import { ControlPanelComponent } from './components/control-panel/control-panel.
 import { ProductDetailComponent } from './layout/product-detail/product-detail.component';
 
 import { RegisterComponent } from './components/user/register/register.component'
+import { UsersListComponent } from './components/user/users-list/users-list.component';
 
 const routes: Routes = [
   {
@@ -30,10 +31,14 @@ const routes: Routes = [
     loadChildren: './done-product/done-product.module#DoneProductModule'
   },
   {
-    path: 'register-user',
-    component: RegisterComponent
+    path: 'register-user', component: RegisterComponent
   },
-  { path: 'user/:id/edit', component: RegisterComponent },
+  {
+    path: 'users/:id/edit', component: RegisterComponent
+  },
+  {
+    path: 'users', component: UsersListComponent
+  }
 ];
 
 @NgModule({
