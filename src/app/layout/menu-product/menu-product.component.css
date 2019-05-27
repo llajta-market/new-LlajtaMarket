@@ -1,5 +1,5 @@
 .button {
-    background-color: #f1818b;
+    background-color: #008080;
     border: none;
     color: #040a0a;
     padding: 20px;
@@ -10,7 +10,7 @@
     margin: 20px 10px;
     cursor: pointer;
     border-collapse: collapse;
-    width: 45%
+    width: 15%
   }
   .button-radius{
     border-radius: 12px;
