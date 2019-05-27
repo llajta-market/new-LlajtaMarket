@@ -1,0 +1,22 @@
+<!-- <div>
+    <button class="open-button" (click)="openForm()">Open Form</button>
+</div> -->
+<div class="form-popup" id="myForm">
+  <!-- <form action="/action_page.php" class="form-container"> -->
+  <form action="/action_page.php" >
+
+  <h2>Product Update</h2>
+
+  <label for="email"><b>Name Product</b></label>
+  <input type="text" placeholder="Enter Name" name="email" required>
+
+  <label for="email"><b>Description</b></label>
+  <input type="text" placeholder="Enter Description" name="email" required>
+
+  <label for="psw"><b>Price</b></label>
+  <input type="text" placeholder="Enter Price" name="psw" required>
+
+  <button type="submit" class="btn" (click)="updateItem()">Update</button>
+  <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+</form>
+</div>
