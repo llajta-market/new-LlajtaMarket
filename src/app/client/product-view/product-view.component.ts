@@ -14,27 +14,30 @@ export class ProductViewComponent implements OnInit {
 
   products$ : Observable<IProduct[]>;
   products : IProduct[];
-  filter$ : Observable<string>;
 
-  category : string;
-  amount : number;
+  category : string[];
 
-  constructor(private productsService : ProductsService) { }
+  constructor(private productsService : ProductsService) { 
+    this.category = ["electronico","juguetes","motores"];
+
+  }
 
   ngOnInit() : void {
     this.products$ = this.productsService.getProducts();
     
-    /*this.products$.subscribe(products=>{
-      this.products = products;
-      console.log(this.products);
-    });*/
-
-    this.products$.pipe(map((ps : IProduct[]) => ps.filter(p => p.category==="electronico"))).subscribe(products=>{
+    this.products$.subscribe(products=>{
       this.products = products;
       console.log(this.products);
     });
+  }
 
-
+  modifyCategory(cat : string):void{
+    console.log(cat);
+    this.products$ = this.productsService.getProducts();
+    this.products$.pipe(map((ps : IProduct[]) => ps.filter(p => p.category===cat))).subscribe(products=>{
+      this.products = products;
+      console.log(this.products);
+    });
   }
 
 }
