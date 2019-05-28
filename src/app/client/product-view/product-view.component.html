@@ -4,8 +4,8 @@
       <div class="col s12 m12">
         
         <ul>
-          <li class="waves-effect waves-light btn" style="background-color: rgb(140, 192, 170)" (click)="modifyCategory(cat)" *ngFor="let cat of category">
-            {{cat}}
+          <li class="waves-effect waves-light btn" style="background-color: rgb(243, 183, 72)" (click)="modifyCategory(cat.name)" *ngFor="let cat of categories">
+            {{cat.name}}
           </li>
         </ul>
       </div>
