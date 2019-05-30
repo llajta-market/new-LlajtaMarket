@@ -3,18 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { ControlPanelComponent } from './components/control-panel/control-panel.component';
 import { ProductDetailComponent } from './layout/product-detail/product-detail.component';
 
+import { RegisterComponent } from './components/user/register/register.component'
 
 const routes: Routes = [
   {
-    path: 'objetivo', 
-    loadChildren : './objetivo/objetivo.module#ObjetivoModule'
+    path: 'objetivo',
+    loadChildren: './objetivo/objetivo.module#ObjetivoModule'
   },
   {
     path: 'product-register',
     loadChildren: './product-register/product-register.module#ProductRegisterModule'
   },
-  {path: 'store',
-  loadChildren: './store/store.module#StoreModule'},
+  {
+    path: 'store',
+    loadChildren: './store/store.module#StoreModule'
+  },
   {
     path: 'control-panel', component: ControlPanelComponent
   },
@@ -29,7 +32,12 @@ const routes: Routes = [
   {
     path: 'home-client',
     loadChildren: './client/client.module#ClientModule'
-  }
+  },
+    path: 'register-user',
+    component: RegisterComponent
+  },
+  { path: 'user/:id/edit', component: RegisterComponent }
+
 ];
 
 @NgModule({
