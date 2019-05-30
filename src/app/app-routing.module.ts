@@ -30,10 +30,14 @@ const routes: Routes = [
     loadChildren: './done-product/done-product.module#DoneProductModule'
   },
   {
+    path: 'home-client',
+    loadChildren: './client/client.module#ClientModule'
+  },
     path: 'register-user',
     component: RegisterComponent
   },
-  { path: 'user/:id/edit', component: RegisterComponent },
+  { path: 'user/:id/edit', component: RegisterComponent }
+
 ];
 
 @NgModule({
