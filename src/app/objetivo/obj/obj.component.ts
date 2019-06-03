@@ -13,7 +13,8 @@ import { Product } from 'src/app/shared/models/product';
 })
 export class ObjComponent implements OnInit {
   products$: Observable<Product[]>;
-  @Input() products: Product | Product;
+  // @Input() products: Product | Product;
+  @Input() product: Product;
 
   newProduct: Product = new Product();
 
@@ -36,13 +37,12 @@ export class ObjComponent implements OnInit {
   }
   goBack(): void {
     this.location.back();
-    // }
-    // updateItem(item ): void{
-    //   this.productsService.updateItem(item.id)
-    //   .subscribe(newItem => {this.updateArray(newItem)};
-    // }
-    // updateArray(newitem){
-    //   this.products$.items[newitem.id].name = newitem.name
-    // }
   }
+  // updateItem(item): void {
+  //   this.productsService.updateItem(item.id)
+  //     .subscribe(newItem => { this.updateArray(newItem) };
+  // }
+  // updateArray(newitem) {
+  //   this.products$.items[newitem.id].name = newitem.name
+  // }
 }
