@@ -31,7 +31,12 @@ const routes: Routes = [
     loadChildren: './done-product/done-product.module#DoneProductModule'
   },
   {
-    path: 'register-user', component: RegisterComponent
+    path: 'home-client',
+    loadChildren: './client/client.module#ClientModule'
+  },
+  {
+    path: 'register-user',
+    component: RegisterComponent
   },
   {
     path: 'users/:id/edit', component: RegisterComponent
