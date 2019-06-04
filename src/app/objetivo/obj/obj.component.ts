@@ -14,7 +14,14 @@ import { Product } from 'src/app/shared/models/product';
 export class ObjComponent implements OnInit {
   products$: Observable<Product[]>;
   // @Input() products: Product | Product;
-  @Input() product: Product;
+  @Input() id: string;
+  @Input() name: string;
+  @Input() price: number;
+  @Input() amount: number;
+  @Input() details: string;
+  @Input() offer: boolean;
+  @Input() category: string;
+  @Input() image: string;
 
   newProduct: Product = new Product();
 
@@ -23,7 +30,7 @@ export class ObjComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    //this.updateItem
+
   }
   // openForm():void {
   //   document.getElementById("myForm").style.display = "block";
@@ -38,11 +45,13 @@ export class ObjComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  // updateItem(item): void {
-  //   this.productsService.updateItem(item.id)
-  //     .subscribe(newItem => { this.updateArray(newItem) };
-  // }
-  // updateArray(newitem) {
-  //   this.products$.items[newitem.id].name = newitem.name
-  // }
+  updateItem(): void {
+    if (this.name !== "" && this.price !== 0 && this.amount !== 0 && this.details !== "" && this.offer !== false && this.category !== "" && this.image !== "") {
+      
+    }
+    //.subscribe(newItem => { this.updateArray(newItem) };
+  }
+  //  updateArray(newitem) {
+  //    this.products$.subscribe[newitem.id].name = newitem.name
+  //  }
 }

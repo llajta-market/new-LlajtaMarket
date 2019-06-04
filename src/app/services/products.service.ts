@@ -6,6 +6,7 @@ import { Product } from '../shared/models/product';
   providedIn: 'root'
 })
 export class ProductsService {
+  private product: Product;
 
   constructor(private db:  AngularFirestore) { }
 
@@ -16,5 +17,11 @@ export class ProductsService {
   updateItem(item: Product): void {
     delete item.id;
     this.db.doc('products/' + item.id).update(item);
+  }
+  updatedProductItem(item:Product):void{
+    this.product = item;
+  }
+  getProduct(): Product{
+    return this.product;
   }
 }
