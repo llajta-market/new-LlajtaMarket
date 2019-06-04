@@ -1,6 +1,42 @@
 <div >
-  <a href = "product-register" class="button button-radius">AGREGAR PRODUCTO</a>
+  <article class="control-panel">
+
+    <section class="control-panel__add-product">
+      <a href = "product-register" class="waves-effect waves-light btn-large">Registrar Producto</a>
+    </section>
+  
+    <section class="control-panel__products">
+        <ng-template ngFor let-producto [ngForOf]="productos" let-i="index">
+          <div class="row">
+            <div class="col s3">
+              
+            </div>
+          </div>
+        </ng-template>
+    </section>
+  
+  </article>
+  
+  <!-- <a href = "product-register" class="button button-radius">AGREGAR PRODUCTO</a> -->
 <div>
-    <a href = "store" class="button button-radius" >CATALOGO</a>
+    <article class="control-panel">
+
+        <section class="control-panel__add-product">
+          <a href = "store" class="waves-effect waves-light btn-large"> Catalogo </a>
+        </section>
+      
+        <section class="control-panel__products">
+            <ng-template ngFor let-producto [ngForOf]="productos" let-i="index">
+              <div class="row">
+                <div class="col s3">
+                  
+                </div>
+              </div>
+            </ng-template>
+        </section>
+      
+      </article>
+    <!-- <a href = "store" class="button button-radius" >CATALOGO</a> -->
 </div>
 </div>
+

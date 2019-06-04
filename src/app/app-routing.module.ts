@@ -30,20 +30,16 @@ const routes: Routes = [
   {
     path: 'message-done',
     loadChildren: './done-product/done-product.module#DoneProductModule'
-
-    
   },
   {
     path: 'store',
-    loadChildren: './store/store.module#StoreModule'
+    loadChildren: './store/store.module#StoreModule'},
+  { path: 'home-client',
+    loadChildren:  './client/client.module#ClientModule'},
+    
+  { path: 'register-user', component: RegisterComponent },
+  { path: 'user/:id/edit', component: RegisterComponent }
 
-  }
-  ,
-  {
-    path: 'register-user',
-    component: RegisterComponent
-  },
-  { path: 'user/:id/edit', component: RegisterComponent },
 ];
 
 @NgModule({

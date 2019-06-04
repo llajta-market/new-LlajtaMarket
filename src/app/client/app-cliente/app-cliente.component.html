@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a class="breadcrumb" [class.active]="viewMode == 'info'" (click)="viewMode='info'">Informacion Personal</a>
+                        <a class="breadcrumb" [class.active]="viewMode == 'catalogo'" (click)="viewMode='catalogo'">Comprar</a>
+                    </div>
+                </div>
+            </nav>                     
+        </div>
+    </div>
+</div>
+
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'info'">
+        <iso-client-zone></iso-client-zone>
+    </div>
+    <div *ngSwitchCase="'catalogo'">
+        <iso-product-view></iso-product-view>
+    </div>
+    <div *ngSwitchDefault>
+        <iso-product-view></iso-product-view>        
+    </div>
+</div>
+
+
