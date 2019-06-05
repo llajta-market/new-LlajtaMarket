@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 import { UserServiceService } from '../../../services/user-service.service'
 
 import { User } from '../../../shared/models/user'
+import { load } from '@angular/core/src/render3';
 
 @Component({
   selector: 'iso-register',
@@ -18,7 +20,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(private userService: UserServiceService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private db: AngularFirestore) {
 
     this.componentAction = "Crear Usuario"
     this.user = new User()
@@ -48,14 +51,12 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  loadUserData(): void {
-    this.userService.getUserById(this.user.user_id).subscribe(
-      result => {
-        this.user = result.payload.doc.data()
-      }, exception => {
-        console.log(exception)
-      }
-    )
+  loadUserData(): any {
+    console.log("load user data.")
+    this.userService.getUserById(String(this.user.user_id)).subscribe(
+      (user) => {
+        this.user = user.payload.data()
+      });
   }
 
   ngOnInit() {

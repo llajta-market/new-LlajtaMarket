@@ -22,11 +22,13 @@ export class UserServiceService {
     return this.db.collection('users').snapshotChanges();
   }
 
-  getUserById(user_id): Observable<any> {
-    return this.db.collection('users').doc(user_id).valueChanges();
+  getUserById(user_id: string): Observable<any> {
+    console.log("user service get user by id.")
+    return this.db.collection('users').doc(user_id).snapshotChanges();
   }
 
   updateUser(user, userId) {
-    return this.db.collection('users').doc(userId).set(user)
+    console.log("user ID"+userId)
+    return this.db.collection('users').doc(String(userId)).set(user)
   }
 }
