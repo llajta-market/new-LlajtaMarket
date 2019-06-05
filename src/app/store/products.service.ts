@@ -9,7 +9,9 @@ import { Product } from '../share/modules/product';
 export class ProductsService {
 
   constructor(private db: AngularFirestore) { }
+  
   getProducts(): Observable<Product[]>{
     return this.db.collection<Product>('products').valueChanges();
   }
+  
 }
