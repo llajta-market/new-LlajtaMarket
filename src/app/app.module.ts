@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import { AngularFireModule} from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +11,9 @@ import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/user/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { UsersListComponent } from './components/user/users-list/users-list.component';
+// import { AppClienteComponent } from './client/app-cliente/app-cliente.component';
+// import { ProductViewComponent } from './client/product-view/product-view.component';
+// import { ClientZoneComponent } from './client/client-zone/client-zone.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { UsersListComponent } from './components/user/users-list/users-list.comp
     ControlPanelComponent,
     RegisterComponent,
     UsersListComponent
+    // AppClienteComponent, ProductViewComponent, ClientZoneComponent
   ],
 
   imports: [
@@ -27,10 +30,8 @@ import { UsersListComponent } from './components/user/users-list/users-list.comp
     AngularFirestoreModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule,
     FormsModule
   ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule {}

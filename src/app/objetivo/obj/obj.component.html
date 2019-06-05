@@ -1,22 +1,33 @@
-<!-- <div>
-    <button class="open-button" (click)="openForm()">Open Form</button>
-</div> -->
-<div class="form-popup" id="myForm">
-  <!-- <form action="/action_page.php" class="form-container"> -->
-  <form action="/action_page.php" >
+<div>
+  <div class="form-popup" id="myForm">
+    <!-- <form action="/action_page.php" class="form-container"> -->
+    <form action="/action_page.php">
 
-  <h2>Product Update</h2>
+      <h2>Product {{product.name}} Update</h2>
 
-  <label for="email"><b>Name Product</b></label>
-  <input type="text" placeholder="Enter Name" name="email" required>
+      <label for="name"><b>Name Product</b></label>
+      <input [(ngModel)]="name" type="text" placeholder="Enter Name" name="Name" required>
 
-  <label for="email"><b>Description</b></label>
-  <input type="text" placeholder="Enter Description" name="email" required>
+      <label for="Price"><b>Price</b></label>
+      <input [(ngModel)]="Price" type="text" placeholder="Enter Price" name="Price" required>
 
-  <label for="psw"><b>Price</b></label>
-  <input type="text" placeholder="Enter Price" name="psw" required>
+      <label for="Amount"><b>Amount</b></label>
+      <input [(ngModel)]="Amount" type="text" placeholder="Enter Amount" name="Amount" required>
 
-  <button type="submit" class="btn" (click)="updateItem()">Update</button>
-  <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
-</form>
+      <label for="Detail"><b>Detail</b></label>
+      <input [(ngModel)]="Detail" type="text" placeholder="Enter Detail" name="Detail" required>
+
+      <label for="Offer"><b>Offer</b></label>
+      <input [(ngModel)]="Offer" type="text" placeholder="Enter Offer" name="Offer" required>
+
+      <label for="Category"><b>Category</b></label>
+      <input [(ngModel)]="Category" type="text" placeholder="Enter Category" name="Category" required>
+
+      <label for="Image"><b>Image</b></label>
+      <input [(ngModel)]="Image" type="text" placeholder="Enter Image" name="Image" required>
+
+      <button type="submit" class="btn" (click)="updateItem()">Update</button>
+      <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+  </div>
 </div>
