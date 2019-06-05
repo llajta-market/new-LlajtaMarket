@@ -9,10 +9,13 @@
           </a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a routerLink="/store">Tienda</a>
+              <a routerLink="/register-user">Registrar usuario</a>
             </li>
             <li>
-              <a routerLink="/product-register">Registrar Producto</a>
+              <a routerLink="/users">Lista de usuarios</a>
+            </li>
+            <li>
+              <a href="product-register">Registrar Producto</a>
             </li>
             <li>
               <a routerLink="/register-user">Registrar usuario</a>

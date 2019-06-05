@@ -30,5 +30,4 @@ export class UserServiceService {
   updateUser(user, userId) {
     console.log("user ID"+userId)
     return this.db.collection('users').doc(String(userId)).set(user)
-  }
 }
