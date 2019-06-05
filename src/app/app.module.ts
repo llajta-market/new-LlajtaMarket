@@ -11,12 +11,16 @@ import { LayoutModule } from './layout/layout.module';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/user/register/register.component';
 import { FormsModule } from '@angular/forms';
+// import { AppClienteComponent } from './client/app-cliente/app-cliente.component';
+// import { ProductViewComponent } from './client/product-view/product-view.component';
+// import { ClientZoneComponent } from './client/client-zone/client-zone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ControlPanelComponent,
-    RegisterComponent
+    RegisterComponent,
+    // AppClienteComponent, ProductViewComponent, ClientZoneComponent
   ],
 
   imports: [

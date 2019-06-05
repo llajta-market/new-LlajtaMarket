@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { MenuProductComponent } from './menu-product/menu-product.component';
+// import { AppClienteComponent } from '../client/app-cliente/app-cliente.component';
+// import { ProductViewComponent } from '../client/product-view/product-view.component';
+// import { ClientZoneComponent } from '../client/client-zone/client-zone.component';
 //import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
@@ -14,6 +17,9 @@ import { MenuProductComponent } from './menu-product/menu-product.component';
                 FooterComponent, 
                 SidenavDirective,
                 MenuProductComponent,
+                // AppClienteComponent, 
+                // ProductViewComponent, 
+                // ClientZoneComponent
                 //ProductDetailComponent
               ],
   imports: [CommonModule, RouterModule],
